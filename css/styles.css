@@ -1,0 +1,161 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    background-color: #1274B6;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.main-img {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.main-h1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.h1-strong {
+    color: #1274B6;
+}
+
+.main-p {
+    margin: 0 24px;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Portafolio */
+
+.portfolio {
+    display: grid;
+    margin: 15px;
+    grid-template-columns: 10px 390px;
+    grid-template-rows: auto;
+    text-align: center;
+}
+
+.portfolio-a1 {
+    grid-column: 2 / 2;
+}
+
+.portfolio-a2 {
+    grid-column: 2 / 2;
+}
+
+.portfolio-a3 {
+    grid-column: 2 / 2;
+}
+
+.portfolio-h3 {
+    text-align: left;
+    margin: 7px;
+}
+
+.portfolio-img {
+    height: 200px;
+    width: 250px;
+    border-radius: 20%;
+}
+
+.portfolio-hr {
+    border: none;
+    color: #1274B6;
+    background-color: #1274B6;
+    height: 1px;
+}
+
+.vertical-line {
+    border: none;
+    border-left: 1px solid #1274B6;
+    height: 750px;
+    margin: 0 10px;
+    display: flex;
+    grid-column: 1 / 1 ;
+    grid-row: 1 / span 3;
+}
+
+/* About me */
+
+.aboutMe-div {
+    display: grid;
+    margin: 15px;
+    grid-gap: 15px;
+    grid-template-columns: 400px;
+    grid-row: auto;
+    text-align: center;
+    border: solid #d3d3d3 1px;
+}
+
+.aboutMe-div_education {
+    
+    border: solid #d3d3d3 1px;
+}
+
+.education-item {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.aboutMe-div_experience {
+    border: solid #d3d3d3 1px;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Form contact */
+
+form {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+}
+
+fieldset {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+ 
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+ 
+button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px
+}
+
+/* Footer */
