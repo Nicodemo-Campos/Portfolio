@@ -10,6 +10,15 @@ hr {
     background-color: #1274B6;
 }
 
+h2, h3 {
+    text-align: center;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #000000;
+}
+
 /* Main */
 
 main {
@@ -42,11 +51,68 @@ main {
     text-align: left;
 }
 
+/* About me */
+
+.grid-container {
+    display: grid;
+    margin: 15px;
+    grid-template-columns: 10px 349px;
+    grid-gap: 20px;
+    padding: 20px;
+    border: solid #707070 1px;
+}
+  
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    grid-column: 2 / 2;
+}
+  
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid #1274B6 1px;
+    margin: 5px 0;
+}
+  
+.text-container p {
+    margin: 4px;
+}
+
+.grid-date-text {
+    font-size: 8px;
+    color: #5a5a5a;
+    text-align: left;
+}
+
+.grid-tittle-text {
+    font-size: 16px;
+    color: #313131;
+}
+
+.grid-sub-text {
+    font-size: 12px;
+    color: #5a5a5a;
+}
+
+.vertical-line-2 {
+    border: none;
+    border-left: 1px solid #1274B6;
+    height: 250px;
+}
+
+.vertical-line-3 {
+    border: none;
+    border-left: 1px solid #1274B6;
+    height: 200px;
+}
+
 /* Portafolio */
 
 .portfolio {
     display: grid;
-    margin: 15px;
+    margin: 15px 0;
     grid-template-columns: 10px 390px;
     grid-template-rows: auto;
     text-align: center;
@@ -92,85 +158,12 @@ main {
     grid-row: 1 / span 3;
 }
 
-/* About me */
-
-.aboutMe-div {
-    display: grid;
-    margin: 15px;
-    grid-gap: 15px;
-    grid-template-columns: 400px;
-    grid-row: auto;
-    text-align: center;
-    border: solid #d3d3d3 1px;
-}
-
-.aboutMe-div_education {
-    
-    border: solid #d3d3d3 1px;
-}
-
-.education-item {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.aboutMe-div_experience {
-    border: solid #d3d3d3 1px;
-}
-
-.experience-item {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 50px 300px;
-    grid-gap: 20px;
-    padding: 20px;
-}
-  
-.grid-item {
-    background-color: #fff;
-    padding: 20px;
-    grid-column: 2 / 2;
-}
-  
-.text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-}
-  
-.text-container p {
-    margin: 4px;
-    font-size: 18px;
-    /* color: #333; */
-}
-
-.grid-date-text {
-    font-size: 8px;
-    color: #5a5a5a;
-    text-align: left;
-}
-
-.grid-tittle-text {
-    font-size: 16px;
-    color: #313131;
-}
-
-.grid-sub-text {
-    font-size: 12px;
-    color: #5a5a5a;
-}
-
 /* Form contact */
 
 form {
     /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 fieldset {
