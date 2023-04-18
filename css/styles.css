@@ -123,6 +123,48 @@ main {
     justify-content: flex-end;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 50px 300px;
+    grid-gap: 20px;
+    padding: 20px;
+}
+  
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    grid-column: 2 / 2;
+}
+  
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+  
+.text-container p {
+    margin: 4px;
+    font-size: 18px;
+    /* color: #333; */
+}
+
+.grid-date-text {
+    font-size: 8px;
+    color: #5a5a5a;
+    text-align: left;
+}
+
+.grid-tittle-text {
+    font-size: 16px;
+    color: #313131;
+}
+
+.grid-sub-text {
+    font-size: 12px;
+    color: #5a5a5a;
+}
+
 /* Form contact */
 
 form {
