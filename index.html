@@ -10,16 +10,24 @@
 </head>
 <body>
     <header>
-
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobreMi">Sobre mi</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <a href="#" class="menu-icon">&#9776;</a>
+      </nav>
     </header>
-    <main>
+    <main id="inicio">
         <!-- Foto de bienvenida y texto -->
         <img class="main-img" src="images/foto.jpg" alt="Nicodemo Campos" title="Nicodemo Campos">
         <h1 class="main-h1">¡Hola! Me llamo Nicodemo Campos...<br> Y soy un <strong class="h1-strong">Desarrollador Web Front-end.</strong></h1>
         <p class="main-p">Soy un estudiante universitario apasionado<br>por el desarrollo web, especialmente en el área de<br>Front End. Me gusta estar en constante aprendizaje y<br>estar al tanto de las últimas tendencias en tecnología.<br>Con mi creatividad y habilidades técnicas,<br>busco dar vida a diseños atractivos y funcionales que<br>mejoren la experiencia del usuario.<br>Mi objetivo es crecer profesionalmente en el mundo<br>del desarrollo web y aportar soluciones innovadoras<br>a los desafíos del mundo digital.</p>
     </main>
     <!-- Sobre mi -->
-    <h2>Educacion</h2>
+    <h2 id="sobreMi">Educacion</h2>
     <div class="grid-container">
         <!-- <div class="mi-circulo"></div> -->
         <!-- <div class="mi-circulo-2"></div> -->
@@ -61,7 +69,7 @@
         </div>
       </div>
     <!-- Portfolio -->
-    <h2>Portafolio</h2>
+    <h2 id="portfolio">Portafolio</h2>
     <div class="hr-line"></div>
     <div class="hr-line-2"></div>
     <h3 style="text-align: left;">Ultimos Proyectos:</h3>
@@ -89,7 +97,7 @@
         </div>
     </div>
     <!-- Contact -->
-    <h2>Contacto</h2>
+    <h2 id="contact">Contacto</h2>
     <div class="hr-line"></div>
     <div class="hr-line-2"></div>
     <h3>¡Mandame un e-mail!</h3>
@@ -110,24 +118,25 @@
     <footer>
         <div class="container-footer">
           <div class="link-item">
-            <a href="#">
+            <a target="_blank" href="https://github.com/Nicodemo-Campos">
               <img src="images/github-fill.svg" alt="Descripción de la imagen 1">
               <span>GitHub</span>
             </a>
           </div>
           <div class="link-item">
-            <a href="#">
+            <a target="_blank" href="https://www.behance.net/nicodemocampos">
               <img src="images/behance-fill.svg" alt="Descripción de la imagen 2">
               <span>Behance</span>
             </a>
           </div>
           <div class="link-item">
-            <a href="#">
+            <a target="_blank" href="https://issuu.com/nicodemocampos">
               <img class="issuu-icon" src="images/issuu-icon.png" alt="Descripción de la imagen 3">
               <span>Issuu</span>
             </a>
           </div>
         </div>
       </footer>
+      <script src="javaScript/script.js"></script>
 </body>
 </html>

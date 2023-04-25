@@ -25,6 +25,63 @@ a:link, a:visited, a:active {
     color: #000000;
 }
 
+/* Nav */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    margin: auto;
+}
+
+li {
+    list-style: none;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+}
+  
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+  
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    z-index: 9998;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+  
+.menu.show {
+    opacity: 1;
+}
+  
+.menu li {
+    margin: 20px;
+}
+  
+.menu li a {
+    font-size: 20px;
+    color: #000;
+}
+  
 /* Main */
 
 main {
@@ -245,6 +302,7 @@ footer {
     background-color: #d3d3d3;
     padding: 20px;
     margin-top: 2rem;
+    width: 100%;
 }
   
 .container-footer {
@@ -281,3 +339,78 @@ img {
     width: 50px;
     height: 50px;
 }
+
+/* MediaQuerrys */
+
+@media (min-width: 768px) {
+    .menu {
+      position: relative;
+      flex-direction: row;
+      height: auto;
+      background-color: transparent;
+      opacity: 1;
+    }
+    
+    .menu li {
+      margin: 0 20px;
+    }
+    
+    .menu li a {
+      font-size: 16px;
+      color: #fff;
+    }
+    
+    .menu-icon {
+      display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+      display: none;
+      /* estilos adicionales para el menú en pantallas pequeñas */
+    }
+    
+    .menu.show {
+      display: block;
+    }
+    
+    .menu-icon {
+      display: block;
+      /* estilos adicionales para el botón de menú en pantallas pequeñas */
+    }
+  }
+  
+
+/* @media (max-width: 768px) {
+    .menu {
+      display: none;
+      position: relative;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .menu.show {
+      display: block;
+    }
+    
+    .menu li {
+      text-align: center;
+      margin: 0;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .menu li:last-child {
+      border-bottom: none;
+    }
+    
+    .menu-icon {
+      display: block;
+    }
+  } */
+  
