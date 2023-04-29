@@ -43,12 +43,6 @@ nav {
 li {
     list-style: none;
 }
-
-.logo a {
-    font-size: 24px;
-    font-weight: bold;
-    color: yellow;
-}
   
 .menu-icon {
     font-size: 24px;
@@ -137,7 +131,7 @@ main {
     flex-direction: column;
     justify-content: center;
     border: solid #1274B6 1px;
-    margin: 5px 0;
+    margin: auto 0;
 }
   
 .text-container p {
@@ -296,6 +290,136 @@ button[type="submit"] {
     border-radius: 3px
 }
 
+/* Test */
+
+/* Define los estilos de inicio */
+div.animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: mover 2s infinite alternate;
+}
+  
+  /* Define la animación */
+@keyframes mover {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100%;
+    }
+}
+  
+.container-animation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+.animation-text1 {
+    font-size: 3em;
+    text-align: center;
+    opacity: 0;
+    animation: lluvia 1s ease forwards;
+  }
+  
+.animation-text2 {
+    font-size: 1.5em;
+    text-align: center;
+    opacity: 0;
+    animation: aparecer 1s ease 0.5s forwards;
+  }
+  
+@keyframes lluvia {
+    0% {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+@keyframes aparecer {
+    0% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.main-text-container {
+    position: relative;
+    text-align: center;
+}
+  
+.main-text {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: #1274B6;
+    position: relative;
+}
+  
+.main-text span {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: rain 1s linear forwards;
+}
+  
+.sub-text {
+    font-size: 20px;
+    color: #555;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out 0.5s forwards;
+}
+  
+@keyframes rain {
+    0% {
+      top: -100px;
+    }
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+}
+  
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+@media (max-width: 768px) {
+    .main-text {
+      font-size: 30px;
+    }
+    
+    .sub-text {
+      font-size: 16px;
+    }
+}
+  
+
 /* Footer */
 
 footer {
@@ -342,12 +466,51 @@ img {
 
 /* MediaQuerrys */
 
+@media (min-width: 320px) {
+    div.text-container {
+        width: 180px;
+        word-wrap: break-word;
+    }
+    div.grid-item {
+        width: 180px;
+    }
+    div.portfolio,div.portfolio-a1,div.portfolio-a2,div.portfolio-a3 {
+        width: 280px;
+    }
+}
+
+@media (min-width: 370px) {
+    div.text-container {
+        width: 240px;
+        word-wrap: break-word;
+    }
+    div.grid-item {
+        width: 280px;
+    }
+    div.portfolio,div.portfolio-a1,div.portfolio-a2,div.portfolio-a3 {
+        width: 340px;
+    }
+}
+
+@media (min-width: 425px) {
+    div.text-container {
+        width: 300px;
+        word-wrap: break-word;
+    }
+    div.grid-item {
+        width: 340px;
+    }
+    div.portfolio,div.portfolio-a1,div.portfolio-a2,div.portfolio-a3 {
+        width: 380px;
+    }
+}
+
 @media (min-width: 768px) {
     .menu {
       position: relative;
       flex-direction: row;
       height: auto;
-      background-color: transparent;
+      background-color: #fff;
       opacity: 1;
     }
     
@@ -357,11 +520,22 @@ img {
     
     .menu li a {
       font-size: 16px;
-      color: #fff;
+      color: #000;
     }
     
     .menu-icon {
       display: none;
+    }
+
+    div.text-container {
+        width: 620px;
+        word-wrap: break-word;
+    }
+    div.grid-item {
+        width: 620px;
+    }
+    div.portfolio,div.portfolio-a1,div.portfolio-a2,div.portfolio-a3 {
+        width: 740px;
     }
 }
 
@@ -379,38 +553,43 @@ img {
       display: block;
       /* estilos adicionales para el botón de menú en pantallas pequeñas */
     }
-  }
-  
+}
 
-/* @media (max-width: 768px) {
-    .menu {
-      display: none;
-      position: relative;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #000;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+@media (min-width: 1024px) {
+    div.text-container {
+        width: 880px;
+        word-wrap: break-word;
     }
-    
-    .menu.show {
-      display: block;
+    div.grid-item {
+        width: 880px;
     }
-    
-    .menu li {
-      text-align: center;
-      margin: 0;
-      padding: 10px 0;
-      border-bottom: 1px solid #ccc;
+    div.portfolio,div.portfolio-a1,div.portfolio-a2,div.portfolio-a3 {
+        width: 980px;
     }
-    
-    .menu li:last-child {
-      border-bottom: none;
+}
+
+@media (min-width: 1440px) {
+    div.text-container {
+        width: 180px;
+        word-wrap: break-word;
     }
-    
-    .menu-icon {
-      display: block;
+    div.grid-item {
+        width: 180px;
     }
-  } */
-  
+    div.portfolio,div.portfolio-a1,div.portfolio-a2,div.portfolio-a3 {
+        width: 280px;
+    }
+}
+
+@media (min-width: 2560px) {
+    div.text-container {
+        width: 180px;
+        word-wrap: break-word;
+    }
+    div.grid-item {
+        width: 180px;
+    }
+    div.portfolio,div.portfolio-a1,div.portfolio-a2,div.portfolio-a3 {
+        width: 280px;
+    }
+}
